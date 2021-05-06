@@ -1,11 +1,18 @@
 import React, { Component } from 'react';
 import Home from './components/Home';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Link } from 'react-router-dom';
+
+import About from './components/About';
 
 class App extends Component {
   render() {
     return (
       <BrowserRouter>
+       <Link to='/'>Home</Link>
+       <br/>
+       <Link to='/about'>About</Link>
+       <br/>
+       <Link to='/users'>Users</Link>
         <Home />
       </BrowserRouter>
     );
