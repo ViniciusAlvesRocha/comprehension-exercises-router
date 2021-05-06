@@ -10,16 +10,16 @@ class App extends Component {
     return (
       <BrowserRouter>
         <Route exact path='/'>
-          <Home />
+          <Home greetingMessage='Good Morning'/>
         </Route>
 
         <Route exact path='/about'>
           <About />
         </Route>
 
-        <Route exact path='/users'>
-          <Users />
-        </Route>
+        <Route exact
+         path='/users/:id'
+         component={ Users } />
         <Link to='/'>Home</Link>
         <br/>
         <Link to='/about'>About</Link>
